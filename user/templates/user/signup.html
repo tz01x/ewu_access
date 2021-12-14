@@ -5,14 +5,35 @@
 {{block.super}} {%endblock%}
 {%block body%} 
 
+<style>
+    legend{
 
-<div class="h-[100vh] container px-4 lg:px-20">
+        font-size: 35px;
+        border-bottom: 1px solid black;
+    }
 
-    <h1 class="font-sans text-center">Signup</h1>
+    input[type="submit"]{
+        padding:15px 25px ;
+        font-weight: 600;
+        border-radius: 5px;
+        color: black;
+        transition: all  200ms ease-in;
+        width: 20%;
+    }
+    input[type="submit"]:hover{
+        background-color: cornflowerblue;
+        color: white;
 
-    <div>
+    }
+</style>
 
-        <form action="." class="form-row" >
+<div class="mt-36 ">
+
+    <h1 class=" text-center text-6xl">Signup</h1>
+
+    <div class="   flex  justify-center mt-10">
+
+        <form action="." class="w-4/6 lg:w-4/12" >
             {%csrf_token%}
             {% crispy form %}
             
